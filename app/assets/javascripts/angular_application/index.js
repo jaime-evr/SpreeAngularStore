@@ -1,6 +1,6 @@
 //= require angular
 //= require angular-resource
 //= require angular-route
-//= require store
+//= require angular_application/store
 //= require_tree .
 
