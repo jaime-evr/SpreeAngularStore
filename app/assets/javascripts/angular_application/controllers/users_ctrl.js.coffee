@@ -1,9 +1,10 @@
-App.controller 'UserCtrl', ['$scope', 'User', ($scope, User) ->
+App.controller 'UserCtrl', ['$scope', '$window', '$location', 'User', ($scope, $window, $location, User) ->
   $scope.user = {}
 
-  $scope.signIn = ->
+  $scope.signUp = ->
     @data = $scope.user
     new User(user: @data).$save (user) ->
-      $('meta[name="api-key"]').attr('content', user.spree_api_key)
+      $window.sessionStorage.token = user.spree_api_key
+      $location.path '/products'
 ]
 

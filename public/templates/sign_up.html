@@ -1,20 +1,20 @@
 <div ng-controller="UserCtrl">
   <h2>Sign up</h2>
 
-  <form ng-submit="signIn()">
+  <form ng-submit="signUp()">
     <div class="field">
         <label for="email">Email:</label>
-        <input type="text" id="user-email" ng-model="user.email" />
+        <input type="email" ng-model="user.email" placeholder="Email Address" required />
     </div>
 
     <div class="field">
       <label for="password">Password:</label>
-      <input type="text" id="user-password" ng-model="user.password" />
+      <input type="password" ng-model="user.password" placeholder="Password" required />
     </div>
 
     <div class="field">
       <label for="confirm-password">Confirm Password:</label>
-      <input type="text" />
+      <input type="password" placeholder="Confirm Password" required />
     </div>
 
     <div class="actions">
