@@ -6,6 +6,6 @@ window.App.config ($httpProvider, $routeProvider) ->
 
   $routeProvider.when('/',
     templateUrl: 'templates/users.html'
-    controller: 'UsersCtrl'
+    controller: 'UserCtrl'
   ).otherwise redirectTo: '/'
 
