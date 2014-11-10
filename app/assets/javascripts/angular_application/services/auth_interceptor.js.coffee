@@ -1,11 +1,11 @@
-App.factory 'authInterceptor', [ '$rootScope', '$window', ($rootScope, $window) ->
+App.factory 'authInterceptor', [ '$rootScope', '$window', '$location', ($rootScope, $window, $location) ->
   request: (config) ->
     if $window.sessionStorage.token
       config.headers['X-Spree-Token'] = $window.sessionStorage.token
     return config
-
-  response: (response) ->
+  ,
+  responseError: (response) ->
     if response.status == 401
-      console.log 'Not Authenticated'
+      $location.path '/'
     return response
 ]
