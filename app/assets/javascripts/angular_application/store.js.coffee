@@ -9,8 +9,8 @@ window.App.config ($httpProvider, $routeProvider) ->
   ).when('/products',
     templateUrl: 'templates/products/index.html'
     controller: 'ProductsCtrl'
-  ).when('/product/:id',
+  ).when('/products/:id',
     templateUrl: 'templates/products/show.html'
-    controller: 'ProductCtrl'
+    controller: 'ProductsCtrl'
   ).otherwise redirectTo: '/'
 
